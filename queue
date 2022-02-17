@@ -1,0 +1,19 @@
+def mod(a):
+    if(a<0):
+        return -a
+    else:
+        return a
+n=int(input())
+for _ in range(n):
+    f=list(map(int,input().strip().split()))
+    ne=f[0]
+    flag=0
+    # flag2=0
+    for j in range(1,ne):
+        if(mod(f[j]-f[ne-1])==1 or mod(f[j]-f[ne-1])==-1):
+            flag+=1
+    if(flag!=0):
+        print("Correct Formation")
+    else:
+        print("Inorrect Formation")
+        
