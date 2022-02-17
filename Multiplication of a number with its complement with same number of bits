@@ -1,0 +1,6 @@
+n=int(input())
+for i in range(n):
+    j=int(input())
+    # print(j<<1)
+    k=int((len(bin(j))-2)*"1",2)
+    print(j*(j^(k)))
